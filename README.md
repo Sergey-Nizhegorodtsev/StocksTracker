@@ -14,4 +14,4 @@ If you would like to learn how to use API in your own projects you can start by 
 StockYahooDownloader stockYahooDownloader = new StockYahooDownloader();
 Stock stock = stockYahooDownloader.Download("FB");
 
-Also the unit test is available for debugging purposes. The class is StockYahooDownloaderTest and the method is testDownload. Open the project in Android studio, point the cursor inside testDownload method, click right mouse button and choose "Debug 'testDownload()'". The unit test will go and download stock information.
+Also the unit test is available for debugging purposes. The class is StockYahooDownloaderTest and the method is testYahooStockDownload. Open the project in Android studio, point the cursor inside testDownload method, click right mouse button and choose "Debug 'testYahooStockDownload()'". The unit test will go and download stock information.
