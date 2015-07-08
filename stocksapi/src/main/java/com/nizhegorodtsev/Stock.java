@@ -8,6 +8,342 @@ import java.util.Date;
  */
 public class Stock {
 
+    public String getTicker() {
+        return ticker;
+    }
+
+    public Double getAsk() {
+        return ask;
+    }
+
+    public Double getAverageDailyVolume() {
+        return averageDailyVolume;
+    }
+
+    public Double getAskSize() {
+        return askSize;
+    }
+
+    public Double getBid() {
+        return bid;
+    }
+
+    public Double getAskRealTime() {
+        return askRealTime;
+    }
+
+    public Double getBidRealTime() {
+        return bidRealTime;
+    }
+
+    public Double getBookValue() {
+        return bookValue;
+    }
+
+    public Double getBidSize() {
+        return bidSize;
+    }
+
+    public String getChangeAndPercentChange() {
+        return changeAndPercentChange;
+    }
+
+    public Double getChange() {
+        return change;
+    }
+
+    public Double getComission() {
+        return comission;
+    }
+
+    public Double getChangeRealTime() {
+        return changeRealTime;
+    }
+
+    public Double getAfterHoursChange() {
+        return afterHoursChange;
+    }
+
+    public Double getDividend() {
+        return dividend;
+    }
+
+    public String getLastTradeDate() {
+        return lastTradeDate;
+    }
+
+    public String getTradeDate() {
+        return tradeDate;
+    }
+
+    public Double getEarnings() {
+        return earnings;
+    }
+
+    public String getErrorIndication() {
+        return errorIndication;
+    }
+
+    public Double getEpsEstimatesCurrentYear() {
+        return epsEstimatesCurrentYear;
+    }
+
+    public Double getEpsEstimatesNextYear() {
+        return epsEstimatesNextYear;
+    }
+
+    public Double getEpsEstimatesNextQuater() {
+        return epsEstimatesNextQuater;
+    }
+
+    public Double getFloatShares() {
+        return floatShares;
+    }
+
+    public Double getDayLow() {
+        return dayLow;
+    }
+
+    public Double getDayHigh() {
+        return dayHigh;
+    }
+
+    public Double get_52weekLow() {
+        return _52weekLow;
+    }
+
+    public Double get_52weekHigh() {
+        return _52weekHigh;
+    }
+
+    public Double getHoldingsGainPercent() {
+        return holdingsGainPercent;
+    }
+
+    public Double getAnnualizedGain() {
+        return annualizedGain;
+    }
+
+    public Double getHoldingsGain() {
+        return holdingsGain;
+    }
+
+    public Double getHoldingsGainPercentRealTime() {
+        return holdingsGainPercentRealTime;
+    }
+
+    public Double getHoldingsGainRealTime() {
+        return holdingsGainRealTime;
+    }
+
+    public String getMoreInfo() {
+        return moreInfo;
+    }
+
+    public Double getOrderBook() {
+        return orderBook;
+    }
+
+    public String getMarketCapitalization() {
+        return marketCapitalization;
+    }
+
+    public String getMarketCapRealTime() {
+        return marketCapRealTime;
+    }
+
+    public String geteBITDA() {
+        return eBITDA;
+    }
+
+    public Double getChangeFrom52WeekLow() {
+        return changeFrom52WeekLow;
+    }
+
+    public Double getPercentChangeFrom52WeekLow() {
+        return percentChangeFrom52WeekLow;
+    }
+
+    public String getLastTradeRealTimeWithTime() {
+        return lastTradeRealTimeWithTime;
+    }
+
+    public Double getChangePercentRealTime() {
+        return changePercentRealTime;
+    }
+
+    public Double getLastTradeSize() {
+        return lastTradeSize;
+    }
+
+    public Double getChangeFrom52WeekHigh() {
+        return changeFrom52WeekHigh;
+    }
+
+    public Double getPercentChangeFrom52WeekHigh() {
+        return percentChangeFrom52WeekHigh;
+    }
+
+    public String getLastTradeWithTime() {
+        return lastTradeWithTime;
+    }
+
+    public Double getLastTrade() {
+        return lastTrade;
+    }
+
+    public Double getHighLimit() {
+        return highLimit;
+    }
+
+    public Double getLowLimit() {
+        return lowLimit;
+    }
+
+    public String getDayRange() {
+        return dayRange;
+    }
+
+    public String getDayRangeRealTime() {
+        return dayRangeRealTime;
+    }
+
+    public Double get_50dayMovingAverage() {
+        return _50dayMovingAverage;
+    }
+
+    public Double get_200dayMovingAverage() {
+        return _200dayMovingAverage;
+    }
+
+    public Double getChangeFrom200dayMovingAverage() {
+        return changeFrom200dayMovingAverage;
+    }
+
+    public Double getPercentChangeFrom200dayMovingAverage() {
+        return percentChangeFrom200dayMovingAverage;
+    }
+
+    public Double getChangeFrom50dayMovingAverage() {
+        return changeFrom50dayMovingAverage;
+    }
+
+    public Double getPercentChangeFrom50dayMovingAverage() {
+        return percentChangeFrom50dayMovingAverage;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public Double getOpen() {
+        return open;
+    }
+
+    public Double getPreviousClose() {
+        return previousClose;
+    }
+
+    public Double getPricePaid() {
+        return pricePaid;
+    }
+
+    public Double getChangePercent() {
+        return changePercent;
+    }
+
+    public Double getPriceSales() {
+        return PriceSales;
+    }
+
+    public Double getPriceBook() {
+        return PriceBook;
+    }
+
+    public String getExDividendDate() {
+        return exDividendDate;
+    }
+
+    public Double getPeRatio() {
+        return peRatio;
+    }
+
+    public String getDividendPayDate() {
+        return dividendPayDate;
+    }
+
+    public Double getPeRatioRealTime() {
+        return peRatioRealTime;
+    }
+
+    public Double getPegRatio() {
+        return pegRatio;
+    }
+
+    public Double getPriceEPSEstimateCurrentYeat() {
+        return priceEPSEstimateCurrentYeat;
+    }
+
+    public Double getPriceEPSEstimateNextYeat() {
+        return priceEPSEstimateNextYeat;
+    }
+
+    public String getSharesOwned() {
+        return sharesOwned;
+    }
+
+    public Double getShortRatio() {
+        return shortRatio;
+    }
+
+    public String getLastTradeTime() {
+        return lastTradeTime;
+    }
+
+    public String getTradeLinks() {
+        return tradeLinks;
+    }
+
+    public String getTickerTrend() {
+        return tickerTrend;
+    }
+
+    public String get_1yearTargetPrice() {
+        return _1yearTargetPrice;
+    }
+
+    public double getVolume() {
+        return volume;
+    }
+
+    public double getHoldingValue() {
+        return holdingValue;
+    }
+
+    public double getHoldingValueRealTime() {
+        return holdingValueRealTime;
+    }
+
+    public String get_52weekRange() {
+        return _52weekRange;
+    }
+
+    public Double getDayValueChange() {
+        return dayValueChange;
+    }
+
+    public Double getDayValueChangeRealTime() {
+        return dayValueChangeRealTime;
+    }
+
+    public String getStockExchange() {
+        return stockExchange;
+    }
+
     private String ticker; //s
     private Double ask;  //a
     private Double averageDailyVolume;   //a2
@@ -23,7 +359,7 @@ public class Stock {
     private Double changeRealTime;   //c6
     private Double afterHoursChange;   //c8
     private Double dividend;   //d
-    private String lastTradeString;   //d1
+    private String lastTradeDate;   //d1
     private String tradeDate;   //d2
     private Double earnings;   //e
     private String errorIndication; //e1
@@ -104,21 +440,24 @@ public class Stock {
     public void setProperty(String propertyName, String propertyValue)
     {
         try {
+
             Field f = this.getClass().getDeclaredField(propertyName);
             if (propertyValue == null)
                 return;
-            if (propertyValue == "N/A")
+            if (propertyValue.equals("N/A") || propertyValue.equals(""))
                 return;
+
+            String strValue = propertyValue.trim();
+            if (strValue.startsWith("\""))
+                strValue = strValue.substring(1);
+            if (strValue.endsWith("\""))
+                strValue = strValue.substring(0, strValue.length() - 1);
+
             Class<?> clazz = f.getType();
             if (clazz.equals(Double.class)) {
-                Double d = new Double(Double.parseDouble(propertyValue.replace('%', ' ').trim()));
+                Double d = new Double(Double.parseDouble(strValue.replace('%', ' ').trim()));
                 f.set(this, d);
             } else if (clazz.equals(String.class)) {
-                String strValue = propertyValue.trim();
-                if (strValue.startsWith("\""))
-                    strValue = strValue.substring(1);
-                if (strValue.endsWith("\""))
-                    strValue = strValue.substring(0, strValue.length() - 1);
                 f.set(this, strValue);
             }
 

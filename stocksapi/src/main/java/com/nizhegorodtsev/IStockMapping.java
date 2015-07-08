@@ -7,4 +7,5 @@ package com.nizhegorodtsev;
  */
 public interface IStockMapping {
     Stock MapStock(String resultString);
+    String BuildFetchUrl(String ticker);
 }

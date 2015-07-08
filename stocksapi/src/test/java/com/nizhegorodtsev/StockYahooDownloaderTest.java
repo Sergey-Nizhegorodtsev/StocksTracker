@@ -10,13 +10,15 @@ import static org.junit.Assert.*;
 public class StockYahooDownloaderTest {
 
     @Test
-    public void testDownload() throws Exception {
+    public void testYahooStockDownload() throws Exception {
 
         StockYahooDownloader stockYahooDownloader = new StockYahooDownloader();
 
         Stock stock = stockYahooDownloader.Download("FB");
 
         assertNotNull(stock);
-
+        assertTrue(stock.getAsk() > 0);
+        assertTrue(stock.getName().contains("Facebook"));
+        assertTrue(stock.getChange() != null);
     }
 }
