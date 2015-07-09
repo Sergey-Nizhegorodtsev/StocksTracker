@@ -437,6 +437,27 @@ public class Stock {
         this.ticker = ticker;
     }
 
+    public void setProperty(String propertyName, double propertyValue)    {
+        try {
+            Field f = this.getClass().getDeclaredField(propertyName);
+            Class<?> clazz = f.getType();
+            Double d = new Double(propertyValue);
+            if (clazz.equals(Double.class)) {
+                f.set(this, d);
+            }
+            else if (clazz.equals(String.class)) {
+                f.set(this, d.toString());
+            }
+        } catch (NoSuchFieldException x) {
+            x.printStackTrace();
+        }catch (IllegalArgumentException x) {
+            x.printStackTrace();
+        } catch (IllegalAccessException x) {
+            x.printStackTrace();
+        }
+    }
+
+
     public void setProperty(String propertyName, String propertyValue)
     {
         try {

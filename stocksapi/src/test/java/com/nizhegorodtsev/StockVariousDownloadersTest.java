@@ -35,4 +35,18 @@ public class StockVariousDownloadersTest {
         assertTrue(stock.getName().contains("Facebook"));
         assertTrue(stock.getChange() != null);
     }
+    @Test
+    public void testMarkitStockDownload() throws Exception {
+
+        StockMarkitondemandMapping stockMapping = new StockMarkitondemandMapping();
+        StockDownloader stockDownloader = new StockDownloader(stockMapping);
+
+        Stock stock = stockDownloader.Download("PAYC");
+
+        assertNotNull(stock);
+        assertTrue(stock.getLastTrade() > 0);
+        assertTrue(stock.getTicker().equals("PAYC"));
+        assertTrue(stock.getName().contains("Paycom Software Inc"));
+        assertTrue(stock.getChange() != null);
+    }
 }
