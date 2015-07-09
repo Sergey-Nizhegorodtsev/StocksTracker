@@ -8,27 +8,38 @@ package com.nizhegorodtsev;
  * http://finance.google.com/finance/info?client=ig&q=aapl
  */
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class StockGoogleMapping implements IStockMapping {
     @Override
     public Stock MapStock(String resultString) {
-
         Stock stock = new Stock();
-        String token[] = resultString.split("//");
+
+        try {
+            String token[] = resultString.split("//");
 
 
-        JSONArray jsonArray = new JSONArray(token[1]);
-        JSONObject jsonObject = jsonArray.getJSONObject(0);
+            JSONArray jsonArray = new JSONArray(token[1]);
+            JSONObject jsonObject = jsonArray.getJSONObject(0);
 
-        stock.setProperty("ticker", jsonObject.getString("t"));
-        stock.setProperty("stockExchange", jsonObject.getString("e"));
-        stock.setProperty("lastTrade", jsonObject.getString("l_cur"));
-        stock.setProperty("lastTradeTime", jsonObject.getString("lt"));
-        stock.setProperty("change", jsonObject.getString("c"));
-        stock.setProperty("changePercent", jsonObject.getString("cp"));
-        stock.setProperty("dividend", jsonObject.getString("div"));
+            stock.setProperty("ticker", jsonObject.getString("t"));
+            stock.setProperty("stockExchange", jsonObject.getString("e"));
+            stock.setProperty("lastTrade", jsonObject.getString("l_cur"));
+            stock.setProperty("lastTradeTime", jsonObject.getString("lt"));
+            stock.setProperty("change", jsonObject.getString("c"));
+            stock.setProperty("changePercent", jsonObject.getString("cp"));
+
+            if (jsonObject.has("div"))
+                stock.setProperty("dividend", jsonObject.getString("div"));
+        } catch (JSONException e) {
+            Logger log = Logger.getLogger(StockGoogleMapping.class.getName());
+            log.log(Level.WARNING, e.toString(), e);
+        }
 
         return stock;
     }
